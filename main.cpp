@@ -53,6 +53,24 @@ int main()
 **/
 vector <vector <char> > initializeMatrix(int rows, int columns, char value)
 {
+vector <vector <char> > grid;
+grid.resize(rows);
+for(int row = 0; row < grid.size(); row++)
+{
+     grid[row].resize(columns);
+     for(int col= 0; col <grid[row].size(); col++)
+{
+
+grid[row][col] = value;
+
+}
+
+}
+
+
+return grid;
+
+
 }
 
 /**
@@ -64,4 +82,17 @@ vector <vector <char> > initializeMatrix(int rows, int columns, char value)
 **/
 void printMatrix(vector <vector <char> > matrix)
 {
+
+ // cout<<"printMatrix=====\n";
+  for(int row = 0; row < matrix.size(); row++)
+  {
+    for(int col = 0; col < matrix[row].size(); col++)
+    {
+      cout<<matrix[row][col]<<" ";
+    }
+    cout<<endl;
+  }
+
+
+
 }
